@@ -189,3 +189,56 @@
   });
 
 })();
+// カテゴリごと順番再生用ユーティリティ
+function createSequentialPlayer(categoryId, playBtnId, stopBtnId) {
+    const playBtn = document.getElementById(playBtnId);
+    const stopBtn = document.getElementById(stopBtnId);
+    const container = document.getElementById(categoryId);
+    let audios = [];
+    let playingIndex = 0;
+    let isPlaying = false;
+
+    async function playNext() {
+        if (!isPlaying || playingIndex >= audios.length) {
+            isPlaying = false;
+            return;
+        }
+        const src = audios[playingIndex].getAttribute('data-src');
+        if (src) {
+            const audio = new Audio(src);
+            audio.addEventListener('ended', () => {
+                playingIndex++;
+                playNext();
+            });
+            audio.play();
+            // 一度に1つしか鳴らさず、停止命令のためcurrentAudioを保持
+            createSequentialPlayer.currentAudio = audio;
+        } else {
+            playingIndex++;
+            playNext();
+        }
+    }
+
+    playBtn.addEventListener('click', () => {
+        // 複数回押した時のガード
+        if (isPlaying) return;
+        audios = Array.from(container.querySelectorAll('.preset-btn'));
+        playingIndex = 0;
+        isPlaying = true;
+        playNext();
+    });
+
+    stopBtn.addEventListener('click', () => {
+        isPlaying = false;
+        if (createSequentialPlayer.currentAudio) {
+            createSequentialPlayer.currentAudio.pause();
+            createSequentialPlayer.currentAudio.currentTime = 0;
+        }
+        createSequentialPlayer.currentAudio = null;
+    });
+}
+
+// それぞれのカテゴリで適用
+createSequentialPlayer('outrage-category', 'outrage-seq-play', 'outrage-seq-stop');
+createSequentialPlayer('beyond-category', 'beyond-seq-play', 'beyond-seq-stop');
+createSequentialPlayer('final-category', 'final-seq-play', 'final-seq-stop');
