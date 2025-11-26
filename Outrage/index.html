@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>なんかこう、個人的な</title>
+        <link rel="stylesheet" href="/Outrage/styles.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <h1>しゃべる！怒鳴る！　アウトレイジ語録集</h1>
+        </header>
+
+        <main class="container">
+            <section class="card">
+                <h2 class="sub">怒鳴るボタン</h2>
+                <p class="lead">以下のボタンはアウトレイジにご出演の皆様方の素晴らしき音声です。押したら怒号が飛びまくります。</p>
+
+                <div style="display: flex; gap: 1em; align-items: center; margin-bottom: 1em;">
+                    <button id="randomPlayBtn" class="btn" type="button">ランダム怒号</button>
+                    <button id="randomStopBtn" class="btn" type="button">粛清（停止）</button>
+                </div>
+                <div class="series-category">
+                    <h3 style="display:inline-block; vertical-align:middle; margin-right:0.5em;">アウトレイジ（第１作目）</h3><span class="series-furigana" style="font-size:0.95em;color:#888;vertical-align:middle;">Outrage ~way of the yakuza~</span>
+                    <div id="outrage-category" class="preset-grid" aria-label="アウトレイジのボタン">
+                            <button class="btn preset-btn" data-src="Outrage_sound/tottotokaere.flac" title="tottotokaere.flac">とっとと帰れ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/urusendayokonoyaro.flac" title="urusendayokonoyaro.flac">うるせーんだこの野郎</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/bokusingu_tsuyokattandesuka.flac" title="bokusingu_tsuyokattandesuka.flac">ボクシング</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/temeharawanenokayo.flac" title="temeharawanenokayo.flac">てめえ払わねえのかよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/sassatoharaeyo.flac" title="sassatoharaeyo.flac">さっさと払えよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/ikmt_gumi__desuka.flac">IKMT組ですか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/100man_yen.flac">100万円だったか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/mottekeyo.flac">持ってけよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kekko_desu_.flac">結構です</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kekko_desu_ttenandayo.flac">結構ですってなんだよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/ikmt_gumi_free.flac">池元組だったらタダ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kanetorinikita.flac">金取りに来た</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kenkauttennoka.flac" title="kenkauttennoka.flac">けんかうってんのか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/konna_hashitagane.flac">こんなはした金</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/konnatsumarane.flac">こんなつまらねえ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/ikemotogumi.flac">池元組にケンカ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/nametennoka.flac" title="nametennoka.flac">なめてんのか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/yubitsume.flac" title="yubitsume.flac">指詰め</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/temenankakoredeii.flac" title="temenankakoredeii.flac">てめえなんかこれでいい</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/nandadeklnenoka.flac" title="nandadeklnenoka.flac">なんだできねぇのか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/matomonadogudase.flac" title="matomonadogudase.flac">まともな道具出せ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/nanigadoguda.flac" title="nanigadoguda.flac">何が道具だ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/yatteyaruyo.flac" title="yatteyaruyo.flac">やってやるよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/atamaokashinjaneka.flac" title="atamaokashinjaneka.flac">頭おかしいんじゃねーの</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/atmaokashiinohateme.flac" title="atmaokashiinohateme.flac">頭おかしいのはてめーだ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kakkotsuketenjane.flac" title="kakkotsuketenjane.flac">かっこつけてんじゃねえ</button>
+
+
+                            <button class="btn preset-btn" data-src="Outrage_sound/chushakinshi.flac" title="chushakinshi.flac">駐車禁止</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/koregataishikan.flac" title="koregataishikan.flac">これが大使館なの？</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/sassatohaire.flac" title="sassatohaire.flac">さっさと入れ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/dodaidaro.flac" title="dodaidaro.flac">どうだ、いいだろう</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/wakattemasuyo.flac" title="wakattemasuyo.flac">わかってますよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/wakanneyo.flac" title="wakanneyo.flac">わかんねーよ</button>
+
+                            <button class="btn preset-btn" data-src="Outrage_sound/showkomisero.flac" title="showkomisero.flac">証拠を見せろ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/ktok_fuzakenna.flac" title="ktok_fuzakenna.flac">ふざけんな</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kitaneyakuza.flac" title="kitaneyakuza.flac">きたねぇヤクザ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/shiraneyo.flac" title="shiraneyo.flac">知らねーよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/nandakono.flac" title="nandakono.flac">なんだこの</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/aikawarazu.flac" title="aikawarazu.flac">相変わらず</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/shirane!!.flac" title="shirane!!.flac">知らねぇ！！</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/oyabun.flac" title="oyabun.flac">俺たちの出番</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/okinaosewa.flac" title="okinaosewa.flac">おおきなお世話</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/nihongodeie.flac" title="nihongodeie.flac">日本語で言え</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kuchiakei!.flac" title="kuchiakei!.flac">口開けい!</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/toroindayo.flac" title="toroindayo.flac">とろいんだよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kattenishobai.flac" title="kattenishobai.flac">勝手に商売</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/haidaro.flac" title="haidaro.flac">はいだろ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kitennokakonoyaro.flac" title="kitennokakonoyaro.flac">聞いてんのかこの野郎</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kajino1.flac" title="kajino1.flac">大使館で薬</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kajino2.flac" title="kajino2.flac">治外法権</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kajino3.flac" title="kajino3.flac">そうか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kajino4.flac" title="kajino4.flac">じゃあカジノ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kajino5.flac" title="kajino5.flac">カジノデキナイヨ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kajino6.flac" title="kajino6.flac">もっと儲かるじゃねえか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kajino7.flac" title="kajino7.flac">こんなところじゃ狭くてできないじゃないか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/ninotamedazo.flac" title="ninotamedazo.flac">身のためだぞ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/hamonnandesuka.flac" title="hamonnandesuka.flac">破門なんですか</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/ikagennishiro.flac" title="ikagennishiro.flac">いい加減にしろ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/karada.flac" title="karada.flac">体使わせやがって</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/asokai.flac" title="asokai.flac">ああそうかい</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kattenishiro.flac" title="kattenishiro.flac">勝手にしろ馬鹿野郎</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/temehamon.flac" title="temehamon.flac">てめえ破門しといて</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/buchi.flac" title="buchi.flac">ぶち</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/kaettayo.flac" title="kaettayo.flac">帰ったよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/temenoshita.flac" title="temenoshita.flac">てめえの舌</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/2mai3mai.flac" title="2mai3mai.flac">2枚3枚</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/daseyo.flac" title="daseyo.flac">出せよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/mottodaseyo.flac" title="mottodaseyo.flac">もっと出せよ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/dasettsuttenda.flac" title="dasettsuttenda.flac">出せって言ってんだ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/mitsukattarashikei.flac" title="mitsukattarashikei.flac">見つかったら死刑</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/e_shikei!_.flac">え、死刑？</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/no_nihongo.flac" title="no_nihongo.flac">日本語喋れないんすか？</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/antananiittenno.flac" title="antananiittenno.flac">あんた何言ってんの</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/urusenda_mizuno.flac" title="urusenda_mizuno.flac">うるせーんだ水野</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/tks.flac" title="tks.flac">誰に向かって喋ってんだ</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/nandaomaera.flac" title="nandaomaera.flac">なんだお前ら</button>
+                            <button class="btn preset-btn" data-src="Outrage_sound/taiho.flac" title="taiho.flac">逮捕するぞ</button>
+
+                            <button class="btn preset-btn" data-src="Outrage_sound/anoyarou.flac" title="anoyarou.flac">あの野郎</button>
+                    </div>
+                </div>
+                <div class="series-category">
+                    <h3 style="display:inline-block; vertical-align:middle; margin-right:0.5em;">アウトレイジ ビヨンド</h3><span class="series-furigana" style="font-size:0.95em;color:#888;vertical-align:middle;">Outrage Beyond</span>
+                    <div id="beyond-category" class="preset-grid" aria-label="アウトレイジ ビヨンドのボタン">
+                        <button class="btn preset-btn" data-src="Outrage_sound/do_nattenda.flac">どうなってんだ</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/fuzakenjane_zo.flac">ふざけんじゃねえぞ</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/kanjite.flac">感じて</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/dakaretai_mitaina.flac">抱かれたいみたいなスイング</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/o_i.flac">おい</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/jamadawa.flac">邪魔だわ</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/tamadene.flac">玉でねえっておい</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/shiraneyo_ba_ka.flac">知らねえよバーカ</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/dakaretai.flac">抱かれたい</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/yakutatazu.flac">何の役にも立たねえ</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/1chinpira.flac">チンピラ1人.flac</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/OKMT!.flac">OKMT!</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/doyou_kyoiku.flac">どうゆう教育</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/gomi.flac">ゴミ</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/damattemiteru.flac">黙ってみているだけ</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/kuwasukane.flac">食わす金はねぇ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/shiraneyo_bakayaro.flac">知らねえよバカ野郎</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/nameteneyo_bakayaro.flac" title="nameteneyo_bakayaro.flac">なめてねぇよバカ野郎</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/nandakoitsu.flac" title="nandakoitsu.flac">なんだこいつ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/nanisama.flac" title="nanisama.flac">何様</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/teppodama.flac" title="teppodama.flac">鉄砲玉</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/senso.flac" title="senso.flac">戦争にでもなったら</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/ahokatemeha.flac" title="ahokatemeha.flac">あほかてめぇは</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/mouiyo_kaerou.flac">もういいよ帰ろう</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/imananiiuta.flac">今何言うた</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/nanigadayo.flac">何がだよ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/kocchigakimeru.flac" title="kocchigakimeru.flac">こっちが決める</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/jikannomuda.flac" title="jikannomuda.flac">時間の無駄</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/nanyakoitsu.flac" title="nanyakoitsu.flac">何やこいつ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/dogukase.flac" title="dogukase.flac">道具貸せ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/no_free.flac" title="no_free.flac">ただじゃおかんぞ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/yareyo_hayakuyare.flac" title="yareyo_hayakuyare.flac">やれよ早くやれ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/omochakakore.flac" title="omochakakore.flac">おもちゃかこれ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/omochakakore2.flac" title="omochakakore2.flac">おもちゃかこれLong</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/yubitsumerukakora.flac" title="yubitsumerukakora.flac">指詰めるかコラ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/gatagata.flac" title="gatagata.flac">ガタガタ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/tadaja.flac" title="tadaja.flac">ただじゃおかねえ</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/chinpira.flac" title="chinpira.flac">チンピラ！ヤレ！</button>
+                    <button class="btn preset-btn" data-src="Outrage_sound/baseball.flac" title="baseball.flac">野球やろうか</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/waresakkikara.flac">そんなもこんなも</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/monku.flac">まだ文句あんかい</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/harakiri.flac">腹きりでもせんかい</button>
+                        <button class="btn preset-btn" data-src="Outrage_sound/yokattana.flac">よかったなじゃねえよ</button>
+                    </div>
+                </div>
+                <div class="series-category">
+                    <h3 style="display:inline-block; vertical-align:middle; margin-right:0.5em;">アウトレイジ 最終章</h3><span class="series-furigana" style="font-size:0.95em;color:#888;vertical-align:middle;">Outrage Coda</span>
+                    <div id="final-category" class="preset-grid" aria-label="アウトレイジ 最終章のボタン">
+                        <button class="btn preset-btn" data-src="Outrage_sound/hellowork.flac">ハローワーク</button>
+                        <p>そのうち追加予定</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <a href="/index.html" class="home-btn">ホームに戻る</a><br>
+            <small>※再生環境にお気をつけください。</small><br>
+            <a href="/html/index.html"><small>※実際には真似しないでください。</small></a>
+            
+        </footer>
+        <script src="/Outrage/script.js"></script>
+    </body>
+</html>
